@@ -54,14 +54,40 @@
         button:hover {
             background: var(--tg-theme-secondary-bg-color);
         }
+        #form {
+            display: none;
+            text-align: center;
+        }
+        input {
+            width: 90%;
+            outline: none;
+            margin: 10px 5%;
+            padding: 15px 5%;
+            font-size: 14px;
+            border: 2px solid silver;
+            border-radius: 5px;
+        }
+        input:focus {
+            border-color: #db5d5b;
+        }
     </style>
 </head>
 <body>
-    <div>Онлайн магазин<h1>
-        <img> src="https://cdn-icons-png.flation.com/512/3595/3595455.png">
+    <div id="main">
+        <h1>Онлайн магазин</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamtium ipsum magni, molestias.</p>
         <button id="buy">Купить</button>
     </div>
-    <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
+    <form id="form">
+        <input type="text" placeholder="Имя" id="user_name">
+        <input type="text" placeholder="Email" id="user_email">
+        <input type="text" placeholder="Телефон" id="user_phone">
+        <button id="order">Оформить</button>
+    </form>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        let tg = window.Telegram.WebApp;
+    </script>
 </body>
 </html>
